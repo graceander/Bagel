@@ -7,7 +7,7 @@ Theia is an accessibility assistant app designed to help visually impaired users
 ## Implemented Features
 
 ### Core Scenarios (AS-IS to TO-BE)
-1. **Real-Time Navigation & Setup** - Voice-activated navigation to locations like restrooms, with initial user setup
+1. **Real-Time Obstacle Detection** - Voice-activated navigation to locations with obstacle detection in place
 2. **Emergency Assistance** - Automatic fall detection with emergency contact notification
 3. **Voice Navigation** - Turn-by-turn voice guidance for indoor navigation
 
