@@ -164,8 +164,8 @@ class EmergencyService {
         await VoiceService.speak("Unable to contact emergency contact. Please seek help immediately.");
       }
     } else {
-      await VoiceService.speak("No emergency contact configured. Please seek help immediately.");
-      print("EMERGENCY: No emergency contact configured!");
+      await VoiceService.speak("No emergency contact configured. Contacting emergency services.");
+      print("EMERGENCY: No emergency contact configured - contacting emergency services");
     }
   }
 
