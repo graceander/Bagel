@@ -171,7 +171,7 @@ class _HomePageState extends State<HomePage> {
     // Default response
     await VoiceService.speak(
       "I can help you find locations like restrooms, library, cafeteria, or specific classrooms. "
-      "What would you like to find?"
+      "Where to?"
     );
     setState(() {
       _statusMessage = "Awaiting navigation request";
