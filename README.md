@@ -1,5 +1,23 @@
 # Team-Bagel
-CPT_S 484 Team Project
+CPT_S 484 Team Project - Theia Accessibility Assistant
+
+## Project Overview
+Theia is an accessibility assistant app designed to help visually impaired users navigate indoor spaces safely and independently. The app implements three core scenarios: navigation assistance, emergency detection, and voice-guided navigation.
+
+## Implemented Features
+
+### Core Scenarios (AS-IS to TO-BE)
+1. **Real-Time Navigation & Setup** - Voice-activated navigation to locations like restrooms, with initial user setup
+2. **Emergency Assistance** - Automatic fall detection with emergency contact notification
+3. **Voice Navigation** - Turn-by-turn voice guidance for indoor navigation
+
+### Key Features
+- Voice recognition for hands-free operation
+- Text-to-speech for audio feedback
+- Fall detection using device sensors
+- Emergency contact system
+- Blind-friendly interface design
+- Settings configuration for personalization
 
 ## How to run Prototype:
 
@@ -20,6 +38,25 @@ CPT_S 484 Team Project
    flutter run
    ```
    I suggest running in a browser or a mobile emulator
+
+## Using the App
+
+### Initial Setup
+1. Tap "TOOLS" button to configure:
+   - Personal information (name, height, preferred units)
+   - Emergency contact details
+   - Voice settings (speed, language)
+
+### Main Features
+- **Green Microphone Button** - Tap to give voice commands like "Find nearest restroom" or "Navigate to classroom 205"
+- **Red Stop Button** - Stop current operations or voice input
+- **Demo Mode** - Access through Tools > "Demo All Scenarios" to see all three scenarios in action
+
+### Voice Commands
+- "Find nearest restroom" - Navigate to closest restroom
+- "Navigate to [location]" - Get directions to specific places
+- "Navigate to classroom [number]" - Find specific classrooms
+- "Simulate fall" - Test emergency detection system
 
 ### Troubleshooting:
 
