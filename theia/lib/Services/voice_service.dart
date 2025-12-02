@@ -22,7 +22,14 @@ class VoiceService {
 
   // Text to speech function
   static Future<void> speak(String text) async {
-    await _flutterTts.speak(text);
+    try {
+      // Limit text length to avoid web TTS errors
+      String textToSpeak = text.length > 100 ? '${text.substring(0, 100)}...' : text;
+      await _flutterTts.speak(textToSpeak);
+    } catch (e) {
+      // Fallback for web demo - print to console
+      print('TTS: $text');
+    }
   }
 
   // Speech to text function
