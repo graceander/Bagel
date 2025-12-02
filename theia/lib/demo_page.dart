@@ -40,12 +40,12 @@ class _DemoPageState extends State<DemoPage> {
             ),
             const SizedBox(height: 20),
             
-            // Scenario 1: Real-Time Obstacle Detection (Modified to Setup)
+            // Scenario 1: Real-Time Obstacle Detection
             _buildScenarioCard(
-              title: 'Scenario 1: Navigation & Setup',
-              description: 'Jaeger opens Theia and says "Find nearest restroom". The app identifies his location and provides voice guidance.',
-              buttonText: 'Demo Navigation',
-              onPressed: _demoNavigationScenario,
+              title: 'Scenario 1: Real-Time Obstacle Detection',
+              description: 'Jaeger navigates to the restroom. Theia detects a wet floor sign and guides him to step left to avoid the obstacle.',
+              buttonText: 'Demo Obstacle Detection',
+              onPressed: _demoObstacleDetectionScenario,
               color: Colors.green,
             ),
             
@@ -130,9 +130,9 @@ class _DemoPageState extends State<DemoPage> {
     );
   }
   
-  Future<void> _demoNavigationScenario() async {
+  Future<void> _demoObstacleDetectionScenario() async {
     setState(() {
-      _demoStatus = "Running Scenario 1: Navigation Demo...";
+      _demoStatus = "Running Scenario 1: Real-Time Obstacle Detection Demo...";
     });
     
     await VoiceService.speak("Scenario 1 Demo: Jaeger opens Theia and requests navigation to the nearest restroom.");
@@ -141,10 +141,28 @@ class _DemoPageState extends State<DemoPage> {
     await VoiceService.speak("Jaeger: Find nearest restroom");
     await Future.delayed(const Duration(seconds: 1));
     
-    await NavigationService.handleNavigationRequest('restroom');
+    await VoiceService.speak("Route found. Starting navigation. The nearest restroom is 30 steps straight ahead.");
+    await Future.delayed(const Duration(seconds: 2));
+    
+    await VoiceService.speak("Begin walking forward.");
+    await Future.delayed(const Duration(seconds: 3));
+    
+    await VoiceService.speak("Continue straight for 20 more steps.");
+    await Future.delayed(const Duration(seconds: 4));
+    
+    await VoiceService.speak("Caution! Obstacle detected 3 feet ahead.");
+    await Future.delayed(const Duration(seconds: 1));
+    
+    await VoiceService.speak("Wet floor sign blocking your path. Proceed with caution and take 3 steps to your left.");
+    await Future.delayed(const Duration(seconds: 3));
+    
+    await VoiceService.speak("Obstacle successfully avoided. Continue forward 2 steps, then turn right.");
+    await Future.delayed(const Duration(seconds: 2));
+    
+    await VoiceService.speak("You have safely arrived at the restroom.");
     
     setState(() {
-      _demoStatus = "Scenario 1 completed - Jaeger successfully navigated to the restroom in under 2 minutes!";
+      _demoStatus = "Scenario 1 completed - Jaeger safely navigated around obstacle and reached the restroom!";
     });
   }
   
@@ -195,7 +213,7 @@ class _DemoPageState extends State<DemoPage> {
     await VoiceService.speak("Welcome to the complete Theia demonstration. I will now show you all three scenarios in sequence.");
     
     // Run all scenarios in sequence
-    await _demoNavigationScenario();
+    await _demoObstacleDetectionScenario();
     await Future.delayed(const Duration(seconds: 3));
     
     await _demoEmergencyScenario();
@@ -203,7 +221,7 @@ class _DemoPageState extends State<DemoPage> {
     
     await _demoVoiceNavigationScenario();
     
-    await VoiceService.speak("Demonstration complete. Theia successfully handled real-time navigation, emergency detection, and voice-guided navigation scenarios.");
+    await VoiceService.speak("Demonstration complete. Theia successfully handled real-time obstacle detection, emergency detection, and voice-guided navigation scenarios.");
     
     setState(() {
       _demoStatus = "Full demonstration completed successfully! All scenarios working properly.";
