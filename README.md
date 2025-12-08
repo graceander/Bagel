@@ -78,4 +78,5 @@ Phase II:
 - Final Project Plan: https://docs.google.com/document/d/1soKC13sNAtbXyWVl8O2LHPFBiQClmF5QbCUN5C4hgds/edit?usp=sharing
 - Project Specification: https://docs.google.com/document/d/19AVVH9jyyldxsKYxMjoL2dTZ-F_L3amtxyDPG-yJBUk/edit?usp=sharing
 - Vision & Scope Document: https://docs.google.com/document/d/1iWf1TrsNyEK-eO_KS6oVSJu1pnuzn4yD8wKR3fPYD-E/edit?usp=sharing
+- Phase II Presentation: https://docs.google.com/presentation/d/1bMfIBZkn6K653sCupwV-z8zF2wrFla3DZRajcxWb5Ac/edit?usp=sharing
 - New WRS: https://docs.google.com/document/d/1L9AKpQu2uBtrZr04H5oJIXo2P44MAEagR18glFRNz6s/edit?usp=sharing
